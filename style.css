@@ -1,0 +1,130 @@
+:root {
+  --text-color: #2f353d;
+  --link-color: #1874ff;
+  --head-color: #17191c;
+
+  --title-bgcolor: #eaf4ff;
+  --table-brdcolor: #cbcbcb;
+
+  --size-border: 0.0625rem;
+  --elements-font-size: 1.125rem;
+  --elements-line-height: 1.875rem;
+}
+
+html {
+  font-size: 100%;
+  font-family: "Rubik", sans-serif;
+  color: var(--text-color);
+}
+
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.title_block {
+  margin-top: 6rem;
+  padding: 4rem 0rem 4rem 0rem;
+  background-color: var(--title-bgcolor);
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--head-color);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: var(--head-color);
+  font-weight: 600;
+  line-height: 2rem;
+}
+
+.image_block {
+  margin-bottom: 1.5rem;
+  margin-top: 3rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image_block img {
+  width: 64rem;
+  height: 40.375rem;
+}
+
+.inner_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+article {
+  width: 43.875rem;
+}
+
+p {
+  width: 43.875rem;
+  font-size: var(--elements-font-size);
+  font-weight: 300;
+  line-height: var(--elements-line-height);
+}
+
+li {
+  font-size: var(--elements-font-size);
+  line-height: var(--elements-line-height);
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+table {
+  margin: 2.625rem auto;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.row-without-border {
+  border-bottom: var(--size-border) solid var(--table-brdcolor);
+}
+
+th,
+td {
+  font-size: var(--elements-font-size);
+  line-height: var(--elements-line-height);
+  padding: 0.35rem 1rem;
+  color: var(--text-color);
+  text-align: center;
+}
+
+th {
+  font-weight: 400;
+  padding-bottom: 0.1rem;
+}
+
+td {
+  font-weight: 300;
+  border-right: var(--size-border) solid var(--table-brdcolor);
+  border-left: var(--size-border) solid var(--table-brdcolor);
+}
+
+td:first-child {
+  text-align: left;
+}
+
+tr:last-child td {
+  border-bottom: var(--size-border) solid var(--table-brdcolor);
+}
