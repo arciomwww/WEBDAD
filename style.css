@@ -2,8 +2,9 @@
   --text-color: #2f353d;
   --link-color: #1874ff;
   --head-color: #17191c;
-  --emoji-bgcolor: #418cfe;
 
+  --emoji-bgcolor: #418cfe;
+  --actual-info-bgcolor: #ffffff;
   --title-bgcolor: #eaf4ff;
   --table-brdcolor: #cbcbcb;
 
@@ -20,6 +21,7 @@ html {
 
 h1,
 h2,
+h3,
 p {
   margin: 0;
   padding: 0;
@@ -47,7 +49,7 @@ h1 {
   font-weight: 700;
 }
 
-h2 {
+h3 {
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
   color: var(--head-color);
@@ -78,7 +80,7 @@ h2 {
   gap: 4rem;
 }
 
-article {
+.post {
   width: 43.875rem;
 }
 
@@ -89,12 +91,12 @@ p {
   line-height: var(--elements-line-height);
 }
 
-article p {
+.post p {
   padding-bottom: 1.5rem;
   width: 100%;
 }
 
-article p:last-child {
+.post p:last-child {
   padding-bottom: 0;
 }
 
@@ -161,16 +163,61 @@ tr:last-child td {
 .emoji {
   width: 3rem;
   height: 3rem;
+  transition: all 0.3s ease;
+  border-radius: 50%;
 }
 
 .emoji-container img.clicked {
   position: relative;
-  border-radius: 50%;
   background-color: var(--emoji-bgcolor);
   width: 1.6875rem;
   height: 1.6875rem;
   padding: 0.625rem;
   transition: background-color 0.3s ease;
+}
+
+.actual_information_block {
+  background-color: var(--title-bgcolor);
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--head-color);
+  font-weight: 500;
+  line-height: 2.5rem;
+  padding: 4rem 4rem;
+}
+
+.informations_block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  width: 100%;
+  padding-top: 0.8rem;
+  padding-bottom: 6.5rem;
+}
+
+.information_block {
+  width: 20.5rem;
+  background-color: var(--actual-info-bgcolor);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0.25rem 0.5rem 0 rgba(137, 147, 164, 0.15);
+}
+
+.information_block img {
+  width: 100%;
+}
+
+.information_block p {
+  color: var(--head-color);
+  width: 100%;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.625rem;
+  padding: 1.25rem 1.0625rem 1.25rem 1.0625rem;
 }
 
 @media screen and (max-width: 1080px) {
