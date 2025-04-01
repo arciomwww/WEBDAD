@@ -9,6 +9,7 @@
   --actual-info-bgcolor: #ffffff;
   --title-bgcolor: #eaf4ff;
   --table-brdcolor: #cbcbcb;
+  --header-bgcolor: #ffffff;
 
   --size-border: 0.0625rem;
   --elements-font-size: 1.125rem;
@@ -37,6 +38,67 @@ body {
   margin: 0;
   box-sizing: border-box;
   background-color: var(--body-bgcolor);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #dfe1e6;
+  background-color: var(--header-bgcolor);
+  z-index: 100;
+}
+
+.header_inner {
+  width: 64rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7813rem;
+}
+
+.menu .hidden_button {
+  display: none;
+}
+
+.menu ul {
+  display: flex;
+  gap: 2rem;
+}
+
+.menu li {
+  list-style-type: none;
+}
+
+.menu a {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: var(--head-color);
+}
+
+header button {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  background-color: #1874ff;
+  color: var(--actual-info-bgcolor);
+  border-radius: 0.5rem;
+  gap: 10px;
+  border: none;
+}
+
+.burger_menu {
+  display: none;
 }
 
 .title_block {
@@ -316,6 +378,42 @@ input::placeholder {
 }
 
 @media screen and (max-width: 768px) {
+  .header_inner {
+    position: relative;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu.opened {
+    display: block;
+    position: absolute;
+    top: 4.2rem;
+    right: 0.2rem;
+    background-color: var(--header-bgcolor);
+    border-radius: 0 0 0 0.675rem;
+    box-shadow: 0 0.25rem 0.5rem 0 rgba(137, 147, 164, 0.15);
+  }
+
+  .menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2.5rem;
+  }
+
+  .burger_menu {
+    display: block;
+  }
+
+  .button_menu_block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+
   h1 {
     font-size: 1.6rem;
   }
@@ -447,6 +545,36 @@ input::placeholder {
 }
 
 @media screen and (max-width: 320px) {
+  .header_inner {
+    padding: 0.75rem 1rem;
+  }
+
+  .menu .hidden_button {
+    display: block;
+  }
+
+  .menu .header_button {
+    display: none;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  button {
+    display: none;
+  }
+
+  .burger_menu {
+    display: block;
+  }
+
+  .button_menu_block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   h1 {
     padding-left: 1rem;
     padding-right: 1rem;

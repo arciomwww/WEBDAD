@@ -3,6 +3,12 @@ document.addEventListener("DOMContentLoaded", () => {
     emoji.addEventListener("click", () => emoji.classList.toggle("clicked"));
   });
 
+  let burger_menu = document.querySelector(".burger_menu");
+  let menu = document.querySelector(".menu");
+  burger_menu.addEventListener("click", () => {
+    menu.classList.toggle("opened");
+  });
+
   const carousel = document.querySelector(".informations_block");
   const dots = document.querySelectorAll(".dot");
   const articles = document.querySelectorAll(".information_block");
