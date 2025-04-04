@@ -41,6 +41,30 @@ body {
   background-color: var(--body-bgcolor);
 }
 
+a {
+  transition: color 0.3s;
+}
+
+button {
+  transition: background-color 0.3s;
+}
+
+.email_block button {
+  transition: background-color 0.3s;
+}
+
+.post a:hover {
+  color: aqua;
+}
+
+button:hover {
+  background-color: darkgrey;
+}
+
+.email_block button:hover {
+  background-color: darkgrey;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -271,6 +295,12 @@ h2 {
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 0.25rem 0.5rem 0 rgba(137, 147, 164, 0.15);
+  transition: transform 0.3s;
+}
+
+.information_block:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0.25rem 0.5rem 0 rgba(137, 147, 164, 40);
 }
 
 .information_block img {
